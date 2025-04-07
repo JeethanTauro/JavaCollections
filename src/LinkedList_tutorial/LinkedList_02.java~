@@ -1,0 +1,23 @@
+package LinkedList_tutorial;
+
+import java.util.LinkedList;
+
+public class LinkedList_02 {
+    public static void main(String[] args) {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.offer(10);
+        list.offer(20);
+        list.offer(40);
+        list.offer(300);
+        list.offer(120);
+        System.out.println(list);
+        System.out.println(list.peek());
+        System.out.println(list.poll());
+        System.out.println(list);
+        System.out.println(list.peek());
+        System.out.println(list.element());
+        System.out.println(list.remove());
+        System.out.println(list);
+
+    }
+}

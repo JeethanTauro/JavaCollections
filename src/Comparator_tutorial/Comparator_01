@@ -1,0 +1,31 @@
+// SORTING USING COMPARATOR
+
+package Comparator_tutorial;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+class Student{
+    int rollNo;
+    String name;
+    public Student(int rollNo , String name){
+        this.rollNo = rollNo;
+        this.name = name;
+    }
+}
+public class Comparator_01 {
+    public static void main(String[] args) {
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(new Student(25,"Jeethan"));
+        students.add(new Student(34,"Rahul"));
+        students.add(new Student(24,"Danish"));
+        students.add(new Student(45,"Maddy"));
+        System.out.println(students);
+
+        students.sort((s1,s2)-> s1.name.compareTo(s2.name)); // according to natural alphabetical order
+        for(Student s : students){
+            System.out.println(s.rollNo + " " + s.name);
+        }
+
+    }
+}
