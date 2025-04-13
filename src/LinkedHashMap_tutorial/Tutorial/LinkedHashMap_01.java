@@ -1,0 +1,33 @@
+package LinkedHashMap_tutorial.Tutorial;
+
+import java.util.LinkedHashMap;
+import java.util.Iterator;
+public class LinkedHashMap_01 {
+    static void printMap(LinkedHashMap<String , Integer> lmap) {
+        Iterator<String> itkey = lmap.keySet().iterator();
+        Iterator<Integer> itval = lmap.values().iterator();
+        while(itkey.hasNext()){
+            System.out.println(itkey.next() + "-->" + itval.next());
+        }
+        System.out.println("----------------------");
+
+    }
+    public static void main(String[] args) {
+        LinkedHashMap<String , Integer> lmap = new LinkedHashMap<>();
+        lmap.put("A" , 1);
+        lmap.put("B" , 2);
+        lmap.put("C" , 3);
+        lmap.put("D" , 4);
+        lmap.put("E" , 5);
+        lmap.put("F" , 6);
+        lmap.put("G" , 7);
+
+        printMap(lmap);
+        lmap.remove("F");
+        printMap(lmap);
+        lmap.clear();
+        printMap(lmap);
+
+
+    }
+}

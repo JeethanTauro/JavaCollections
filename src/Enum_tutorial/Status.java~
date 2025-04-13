@@ -1,0 +1,4 @@
+package Enum_tutorial;
+
+public enum Status {
+}

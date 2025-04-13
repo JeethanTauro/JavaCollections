@@ -1,0 +1,27 @@
+package WeakHashMap_tutorial;
+
+import java.util.WeakHashMap;
+
+public class WeakHashMap_01 {
+    public static void main(String[] args) {
+        WeakHashMap<String , Integer> map = new WeakHashMap<>();
+        String key1 = new String("a");
+        String key2 = new String("b");
+        String key3 = new String("c");
+        String key4 = new String("d");
+        map.put(key1,1);
+        map.put(key2,2);
+        map.put(key3,3);
+        map.put(key4,4);
+        System.out.println(map);
+        key1 = null;
+        System.gc();
+        try{
+            Thread.sleep(3000);
+        }
+        catch (Exception e){}
+        System.out.println(map);
+
+
+    }
+}
